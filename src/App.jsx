@@ -1,15 +1,15 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
 import { Home } from "./pages/Home";
+import Sidebar from "./components/SideBar";
 
 function App() {
   return (
-    <main>
-      <h1 className="text-red-500">Ur mother is my hoether</h1>
-      <Navigation />
+    <main className="flex flex-row">
+      <Sidebar />
       <Router>
         <Routes>
-          <Route path="/" component={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </main>
