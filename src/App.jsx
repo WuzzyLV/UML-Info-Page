@@ -7,7 +7,7 @@ function App() {
   return (
     <main className="flex flex-row">
       <Sidebar />
-      <div>
+      <div className="w-full">
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />

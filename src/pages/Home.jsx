@@ -4,20 +4,19 @@ import React from "react";
 export const Home = () => {
   return (
     <>
-      <section className="h-screen flex items-center">
+      <section className="h-screen w-full flex items-center">
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
           <div className="space-y-5 max-w-4xl mx-auto text-center">
             <h2 className="text-4xl text font-extrabold mx-auto md:text-5xl">
-              Build and scale up your startup with the best tools
+              UML Diagrammas
             </h2>
             <p className="max-w-2xl mx-auto text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+              Veids kā paradīt programmatūras arhitektūru un implimentāciju.
             </p>
 
             <Button size="sm">
               <div className="flex flex-row justify-center items-center gap-1">
-                Get started
+                Turpināt
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
