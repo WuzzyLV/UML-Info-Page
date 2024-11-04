@@ -1,8 +1,5 @@
-import { useState } from "react";
 import { Alert } from "@material-tailwind/react";
 import { Spinner } from "@material-tailwind/react";
-
-import "./App.css";
 
 function App() {
   return (
