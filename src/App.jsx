@@ -7,11 +7,13 @@ function App() {
   return (
     <main className="flex flex-row">
       <Sidebar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
+      <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Router>
+      </div>
     </main>
   );
 }

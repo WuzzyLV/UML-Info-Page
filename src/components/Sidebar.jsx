@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 // NavLink component
 const NavLink = ({ ...props }) => {
   const { children, href = "", className = "", active = "" } = props;
@@ -88,11 +87,7 @@ const Sidebar = () => {
         <div className="sticky top-0 space-y-8 bg-white">
           <div className="h-20 flex items-center px-4 border-b md:px-8">
             <a href="javascript:void(0)" className="flex-none">
-              <img
-                src="https://floatui.com/logo.svg"
-                width={140}
-                className="mx-auto"
-              />
+              <img src="/logo.png" width={140} className="mx-auto" />
             </a>
           </div>
         </div>
