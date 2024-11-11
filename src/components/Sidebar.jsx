@@ -91,11 +91,11 @@ const Sidebar = () => {
               </NavLink>
             </div>
             <div>
-              <Title>Klašu diagramma</Title>
+              <Title>Klašu diagrammas</Title>
               <SectionsList items={lessons.classDiagram} />
             </div>
             <div>
-              <Title>Aktivitāšu diagramma</Title>
+              <Title>Aktivitāšu diagrammas</Title>
               <SectionsList items={lessons.activityDiagram} />
             </div>
           </>
