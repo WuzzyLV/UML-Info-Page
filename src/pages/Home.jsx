@@ -40,7 +40,7 @@ const Types = () => {
                 key={idx}
                 className={`feature-${idx + 1} space-y-3 py-8 lg:px-12 sm:py-0`}
               >
-                <div className="w-12 h-12 text-2xl border text-accent1 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 text-2xl border bg-accent2 bg-opacity-50 text-accent1 rounded-full flex items-center justify-center">
                   {item.icon}
                 </div>
                 <h4 className="text-lg text-gray-800 font-semibold">
@@ -88,7 +88,7 @@ const FreqUsed = () => {
             <ul className="space-y-8">
               {features.map((item, idx) => (
                 <li key={idx} className="flex gap-x-4">
-                  <div className="flex-none w-12 h-12 text-xl bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+                  <div className="flex-none w-12 h-12 text-xl bg-accent2 bg-opacity-50 text-accent1 rounded-lg flex items-center justify-center">
                     {item.icon}
                   </div>
                   <div>

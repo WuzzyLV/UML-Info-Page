@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="flex-none mt-4 md:mt-0">
           <figure>
             <img
-              className="h-64 w-full rounded-lg object-cover object-center"
+              className=" p-2 bg-white shadow h-64 w-full rounded-lg object-cover object-center"
               src="/classEx.svg"
               alt="Uml example"
             />
@@ -68,11 +68,11 @@ const BenefitsSection = () => {
       <div className="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
         <div className="max-w-2xl mx-auto">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            The fastest way to launch a product
+            Klašu diagrammas priekšrocības
           </h3>
           <p className="mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            congue, nisl eget molestie varius, enim ex faucibus purus.
+            Ir daudz labumi kā arī sliktas lietas, bet šie ur mūsuprāt
+            svarīgakie plusi šim diagrammas veidam.
           </p>
         </div>
         <div className="mt-12">
