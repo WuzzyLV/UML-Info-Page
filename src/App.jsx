@@ -2,7 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import Sidebar from "./components/SideBar";
 import { Footer } from "./components/Footer";
-
+import { ClassHome } from "./pages/ClassHome";
 // pages.js
 export const pages = [
   { id: 1, title: "Start", path: "/", content: <Home /> },
@@ -10,7 +10,7 @@ export const pages = [
     id: 2,
     title: "Kapēc un kā",
     path: "/class-diagram",
-    content: <div>Class</div>,
+    content: <ClassHome />,
   },
   {
     id: 3,
