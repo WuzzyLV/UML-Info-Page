@@ -34,7 +34,7 @@ export const pages = [
 
 function App() {
   return (
-    <main className="flex flex-row">
+    <main className="flex flex-row bg-[#fafafb3d]  ">
       <Router>
         <Sidebar />
         <div className="w-full">
