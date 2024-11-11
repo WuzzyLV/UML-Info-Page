@@ -5,6 +5,7 @@ export default withMT({
   theme: {
     colors: {
       accent1: "#A53F4F",
+      accent2: "#FAD9D5",
     },
     extend: {},
   },
