@@ -7,6 +7,7 @@ import { ClassNotation } from "./pages/ClassSyntax";
 import { ClassRelation } from "./pages/ClassRelation";
 import { ActivityHome } from "./pages/ActivityHome";
 import { ActivitySwimlane } from "./pages/ActivitySwimlane";
+import { ActivityNotations } from "./pages/ActivityNotations";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -38,7 +39,7 @@ export const pages = [
     id: 6,
     title: "Notācijas",
     path: "/activity-diagram/notations",
-    content: <ActivityHome />,
+    content: <ActivityNotations />,
   },
   {
     id: 7,
