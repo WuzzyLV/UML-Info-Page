@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTestStore } from "../stores/testStore";
 // NavLink component
 const NavLink = ({ ...props }) => {
   const { children, href = "", className = "", active = "" } = props;
@@ -24,6 +25,13 @@ const NavLink = ({ ...props }) => {
       window.removeEventListener("popstate", handleRouteChange);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
+  const { setOpen, deleteAnswers } = useTestStore();
+
+  useEffect(() => {
+    setOpen(false);
+    deleteAnswers();
   }, [pathname]);
 
   return (
