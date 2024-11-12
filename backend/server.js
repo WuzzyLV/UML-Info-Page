@@ -15,7 +15,7 @@ app.get("/hello", (req, res) => {
 
 //404
 app.use((req, res, next) => {
-  res.status(404).json({ message: "Not found" });
+  res.status(404).json({ message: req.path + "Not found" });
 });
 
 app.listen(port, () => {
