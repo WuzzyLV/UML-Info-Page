@@ -1,5 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import { useTestStore } from "../stores/testStore";
+import { useEffect, useState } from "react";
 
 export const TestPage = () => {
   const { open, questionNumber } = useTestStore();
@@ -52,18 +53,6 @@ const Question = (question) => {
   const { questionNumber, setQuestionNumber, setAnswers, answers } =
     useTestStore();
 
-  const handleNextQuestion = () => {
-    if (questionNumber < questions.length - 1) {
-      setQuestionNumber(questionNumber + 1);
-    }
-  };
-
-  const handlePrevQuestion = () => {
-    if (questionNumber > 0) {
-      setQuestionNumber(questionNumber - 1);
-    }
-  };
-
   const { question: questionData } = question;
 
   return (
@@ -84,11 +73,20 @@ const Question = (question) => {
                 key={option.id}
                 color="gray"
                 size="lg"
+                disabled={answers.some(
+                  (answer) =>
+                    answer.questionId === questionData.id &&
+                    answer.pickedOption === option.id
+                )}
                 onClick={() => {
                   setAnswers({
                     questionId: questionData.id,
                     pickedOption: option.id,
                   });
+                  if (questionNumber + 1 === questions.length) {
+                    return;
+                  }
+                  setQuestionNumber(questionNumber + 1);
                 }}
                 className="px-2.5 py-2.5 text-accent1 duration-150 bg-accent2 rounded-lg hover:bg-red-100"
               >
@@ -97,21 +95,13 @@ const Question = (question) => {
             ))}
           </div>
         ) : null}
+
         <div className="mt-20 flex flex-row justify-center">
-          <Button
-            size="sm"
-            onClick={handlePrevQuestion}
-            disabled={questionNumber === 0}
-          >
-            Back
-          </Button>
-          <Button
-            size="sm"
-            onClick={handleNextQuestion}
-            disabled={questionNumber + 2 > questions.length}
-          >
-            Next
-          </Button>
+          {questionNumber + 1 === questions.length && (
+            <Button size="sm" onClick={() => {}} fullWidth>
+              Pabeigt testu!
+            </Button>
+          )}
         </div>
       </div>
     </section>
