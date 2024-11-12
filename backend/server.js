@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import { testAnswers } from "./answers.js";
 dotenv.config();
 
 const app = express();
@@ -11,8 +12,27 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-  console.log(req.body);
-  res.status(200).json({ message: "Submitted!" });
+  const answers = req.body;
+  let points = 0;
+
+  if (answers.length !== testAnswers.length) {
+    res.status(400).json({ message: "Something went wrong!" });
+    return;
+  }
+
+  testAnswers.forEach((testAnswer) => {
+    const submittedAnswer = answers.find(
+      (answer) => answer.questionId === testAnswer.questionId
+    );
+
+    if (submittedAnswer.pickedAnswer !== testAnswer.answer) {
+      return;
+    }
+
+    points++;
+  });
+
+  res.status(200).json({ points });
 });
 
 //404
