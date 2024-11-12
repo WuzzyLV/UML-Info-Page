@@ -50,7 +50,7 @@ const HeroSection = () => {
 };
 
 const Question = (question) => {
-  const { questionNumber, setQuestionNumber, setAnswers, answers } =
+  const { questionNumber, setQuestionNumber, setAnswers, answers, submit } =
     useTestStore();
 
   const { question: questionData } = question;
@@ -98,7 +98,7 @@ const Question = (question) => {
 
         <div className="mt-20 flex flex-row justify-center">
           {questionNumber + 1 === questions.length && (
-            <Button size="sm" onClick={() => {}} fullWidth>
+            <Button size="sm" onClick={submit} fullWidth>
               Pabeigt testu!
             </Button>
           )}

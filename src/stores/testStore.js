@@ -20,4 +20,17 @@ export const useTestStore = create((set, get) => ({
         return { answers: [...state.answers, newAnswer] };
       }
     }),
+
+  submit: async () => {
+    const response = await fetch("/api/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(get().answers),
+    });
+    if (response.ok) {
+      set({ answers: [] });
+    }
+  },
 }));
