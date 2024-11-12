@@ -80,7 +80,12 @@ const Sidebar = () => {
       { name: "Piemēri", href: "/activity-diagram/examples" },
     ],
   };
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
+  //useeffect if path changes
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <>
