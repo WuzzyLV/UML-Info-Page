@@ -13,7 +13,7 @@ export const ActivitySwimlane = () => {
 
 const HeroSection = () => {
   return (
-    <section className="h-screen -mb-48  mt-28">
+    <section className="h-screen -mb-64  mt-48">
       <div className="max-w-screen-xl mx-auto px-4  gap-x-12 justify-between md:flex md:px-8">
         <div className="max-w-xl flex flex-col justify-center">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
