@@ -6,6 +6,7 @@ import { ClassHome } from "./pages/ClassHome";
 import { ClassNotation } from "./pages/ClassSyntax";
 import { ClassRelation } from "./pages/ClassRelation";
 import { ActivityHome } from "./pages/ActivityHome";
+import { ActivitySwimlane } from "./pages/ActivitySwimlane";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -31,6 +32,24 @@ export const pages = [
     id: 5,
     title: "Kapēc un kā",
     path: "/activity-diagram",
+    content: <ActivityHome />,
+  },
+  {
+    id: 6,
+    title: "Notācijas",
+    path: "/activity-diagram/notations",
+    content: <ActivityHome />,
+  },
+  {
+    id: 7,
+    title: "Peljosla",
+    path: "/activity-diagram/swimlane",
+    content: <ActivitySwimlane />,
+  },
+  {
+    id: 8,
+    title: "Piemēri",
+    path: "/activity-diagram/examples",
     content: <ActivityHome />,
   },
 ];

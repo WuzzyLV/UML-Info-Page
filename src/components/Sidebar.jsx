@@ -68,8 +68,10 @@ const Sidebar = () => {
     ],
     activityDiagram: [
       { name: "Kapēc un kā", href: "/activity-diagram" },
-      { name: "Installing and Configuring Cargo", href: "javascript:void(0)" },
-      { name: "Basic Cargo Commands", href: "javascript:void(0)" },
+      { name: "Notācijas", href: "/activity-diagram/notations" },
+      { name: "Peldjosla", href: "/activity-diagram/swimlane" },
+
+      { name: "Piemēri", href: "/activity-diagram/examples" },
     ],
   };
 
