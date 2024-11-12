@@ -2,7 +2,11 @@ import { Typography } from "@material-tailwind/react";
 import notationExample from "../assets/classNotation.svg";
 import visibilityExample from "../assets/classVisibility.svg";
 import ImageWithComments from "../components/ImageWithComments";
-import associationExample from "../assets/classRelationships/assoc.drawio.svg";
+import associationExample from "../assets/classRelationships/assoc.svg";
+import inheritanceExample from "../assets/classRelationships/inher.svg";
+import aggregationExample from "../assets/classRelationships/aggreg.svg";
+import dependencyExample from "../assets/classRelationships/dependency.svg";
+import realizationExample from "../assets/classRelationships/realiz.svg";
 
 export const ClassRelation = () => {
   return (
@@ -13,29 +17,29 @@ export const ClassRelation = () => {
 };
 
 const HeroSection = () => {
-  const team = [
+  const relations = [
     {
       img: associationExample,
       name: "Asociācija",
       desc: "Asociācija attēlo vienkāršu savienojumu starp divām vai vairākām klasēm. Tā parāda, ka klases sadarbojas vai ir savstarpēji saistītas.",
     },
     {
-      img: associationExample,
+      img: inheritanceExample,
       name: "Mantošana",
       desc: "Mantošana, norāda, ka viena klase manto citas klases īpašības un uzvedību.",
     },
     {
-      img: associationExample,
+      img: aggregationExample,
       name: "Agregācija",
       desc: "Agregācija ir vājas saites attiecība, kur viena klase sastāv no citām klasēm, bet klases var eksistēt neatkarīgi.",
     },
     {
-      img: associationExample,
+      img: dependencyExample,
       name: "Atkarība",
       desc: "Atkarība norāda, ka viena klase izmanto citu klasi, piemēram, kā metodes parametru vai mainīgo. Tā ir īslaicīga un nenoteikta saite starp klasēm.",
     },
     {
-      img: associationExample,
+      img: realizationExample,
       name: "Realizācija",
       desc: "Realizācija ir attiecības veids, kas parāda, ka viena klase īsteno kādu interfeisu vai abstrakto klasi.",
     },
@@ -55,11 +59,11 @@ const HeroSection = () => {
         </div>
         <div className="mt-12">
           <ul className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
-            {team.map((item, idx) => (
+            {relations.map((item, idx) => (
               <li key={idx} className="flex gap-4 items-center">
                 <div className="flex-none w-24 h-24">
                   <img
-                    src={associationExample}
+                    src={item.img}
                     className="w-full h-full rounded-full"
                     alt=""
                   />
