@@ -2,6 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import notationExample from "../assets/classNotation.svg";
 import visibilityExample from "../assets/classVisibility.svg";
 import ImageWithComments from "../components/ImageWithComments";
+import associationExample from "../assets/classRelationships/assoc.drawio.svg";
 
 export const ClassRelation = () => {
   return (
@@ -14,10 +15,9 @@ export const ClassRelation = () => {
 const HeroSection = () => {
   const team = [
     {
-      avatar:
-        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
-      name: "Martiana dialan",
-      title: "Product designer",
+      img: associationExample,
+      name: "Asociācija",
+      desc: " Asociācija attēlo vienkāršu savienojumu starp divām vai vairākām klasēm. Tā parāda, ka klases sadarbojas vai ir savstarpēji saistītas.",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
@@ -49,7 +49,7 @@ const HeroSection = () => {
       <div className=" max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Meet our team
+            Relācija starp klasēm
           </h3>
           <p className="text-gray-600 mt-3">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -62,7 +62,7 @@ const HeroSection = () => {
               <li key={idx} className="flex gap-4 items-center">
                 <div className="flex-none w-24 h-24">
                   <img
-                    src={item.avatar}
+                    src={item.img}
                     className="w-full h-full rounded-full"
                     alt=""
                   />
@@ -71,7 +71,7 @@ const HeroSection = () => {
                   <h4 className="text-gray-700 font-semibold sm:text-lg">
                     {item.name}
                   </h4>
-                  <p className="text-indigo-600">{item.title}</p>
+                  <p className="text-gray-600 ">{item.desc}</p>
                 </div>
               </li>
             ))}
