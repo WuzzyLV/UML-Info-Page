@@ -10,7 +10,6 @@ const NavLink = ({ ...props }) => {
 
   useEffect(() => {
     const handleRouteChange = () => {
-      console.log(pathname, href);
       if (window.location.pathname === href) {
         setIsActive(active);
       } else {
