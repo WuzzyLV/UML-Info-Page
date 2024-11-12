@@ -68,20 +68,19 @@ const SubmissionResult = () => {
 
   const summary = (points) => {
     if (points < 3) {
-      return "Jūsu zināšanas par UML diagrammām ir ļoti vājas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+      return "Jūsu zināšanas par UML diagrammām ir ļoti vājas. 😭😿 Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
     }
     if (points < 5) {
-      return "Jūsu zināšanas par UML diagrammām ir vidējas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+      return "Jūsu zināšanas par UML diagrammām ir vidējas. 🙌 Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
     }
     if (points > 7) {
-      return "Jūsu zināšanas par UML diagrammām ir labas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+      return "Jūsu zināšanas par UML diagrammām ir labas. 👏💋 Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
     }
   };
 
   return (
     <section className="h-screen -mb-64 mt-48 overflow-x-hidden">
-      <Confetti />
-
+      <Confetti />]
       <div className="absolute top-0 -z-10 w-full right-0  bg-gradient-to-b from-accent1 to-white opacity-10 blur-xl"></div>
       <div className=" z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
         <div className="space-y-5 max-w-4xl mx-auto text-center">
@@ -94,6 +93,7 @@ const SubmissionResult = () => {
               style={{
                 color: getGradientColor((points / questions.length) * 100),
               }}
+              className=" bg-gray-300 px-2 rounded-lg border-gray-500 border"
             >
               {Math.round((points / questions.length) * 100)}%
             </span>
