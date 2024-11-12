@@ -90,6 +90,7 @@ const Question = (question) => {
                     pickedOption: option.id,
                   });
                 }}
+                className="px-2.5 py-2.5 text-accent1 duration-150 bg-accent2 rounded-lg hover:bg-red-100"
               >
                 {option.title}
               </Button>
