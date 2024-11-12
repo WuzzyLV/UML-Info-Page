@@ -1,4 +1,9 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import { Home } from "./pages/Home";
 import Sidebar from "./components/Sidebar";
 import { Footer } from "./components/Footer";
@@ -34,31 +39,31 @@ export const pages = [
     content: <ClassRelation />,
   },
   {
-    id: 9,
+    id: 5,
     title: "Klašu piemēri",
     path: "/class-diagram/examples",
     content: <ClassExample />,
   },
   {
-    id: 5,
+    id: 6,
     title: "Kapēc un kā",
     path: "/activity-diagram",
     content: <ActivityHome />,
   },
   {
-    id: 6,
+    id: 7,
     title: "Notācijas",
     path: "/activity-diagram/notations",
     content: <ActivityNotations />,
   },
   {
-    id: 7,
+    id: 8,
     title: "Peldjosla",
     path: "/activity-diagram/swimlane",
     content: <ActivitySwimlane />,
   },
   {
-    id: 8,
+    id: 9,
     title: " Aktivitāšu piemēri",
     path: "/activity-diagram/examples",
     content: <ActivityExample />,

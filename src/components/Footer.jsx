@@ -21,6 +21,10 @@ export const Footer = () => {
   const prevPage = pages[currentPageIndex - 1];
   const nextPage = pages[currentPageIndex + 1];
 
+  if (location.pathname === "/tests") {
+    return null;
+  }
+
   return (
     <footer className="w-full mb-12">
       <div className="flex justify-center">
