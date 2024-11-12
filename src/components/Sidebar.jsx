@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // NavLink component
@@ -22,6 +23,7 @@ const NavLink = ({ ...props }) => {
     return () => {
       window.removeEventListener("popstate", handleRouteChange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

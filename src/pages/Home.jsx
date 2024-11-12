@@ -1,5 +1,4 @@
 import { Button } from "@material-tailwind/react";
-import React from "react";
 
 export const Home = () => {
   return (
@@ -14,12 +13,12 @@ export const Home = () => {
 const Types = () => {
   const features = [
     {
-      icon: <i class="fa-regular fa-folder-tree"></i>,
+      icon: <i className="fa-regular fa-folder-tree"></i>,
       title: "Strukturālas diagrammas",
       desc: "Lai vieglāk paradītu <b>statiskās puses no sistēmas</b>, objektus, attiecības un arī pašu arhitektūru, paredzētas lai abstraktāk varētu izsprast sistēmas un attiecības starp sistēmām.",
     },
     {
-      icon: <i class="fa-solid fa-person"></i>,
+      icon: <i className="fa-solid fa-person"></i>,
       title: "Uzvedības diagrammas",
       desc: "Šīs diagrammas parāda <b>dinamiskās puses no sistēmām</b>, kā lietas mainās ar laiku vai ar lietotāju interakciju. Šīs diagrammas palīdz izsprast kā programmatūra stradās lietošanas laikā.",
     },
@@ -59,12 +58,12 @@ const Types = () => {
 const FreqUsed = () => {
   const features = [
     {
-      icon: <i class="fa-regular fa-diagram-project"></i>,
+      icon: <i className="fa-regular fa-diagram-project"></i>,
       title: "Klašu diagrammas",
       desc: "Attēlo sistēmas klasēs, to atribūtos, metodēs un attiecībās. Ir būtiskas programēšanā gan datubāžu darbos.",
     },
     {
-      icon: <i class="fa-regular fa-user"></i>,
+      icon: <i className="fa-regular fa-user"></i>,
       title: "Lietošanas gadijumu diagrammas",
       desc: "Vizuālas reprezentācijas, kas attēlo sistēmas funkcionalitāti no lietotāju perspektīvas. Palīdz izprast pašu lietošanas plūsmu.",
     },

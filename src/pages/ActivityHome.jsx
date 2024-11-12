@@ -47,17 +47,17 @@ const HeroSection = () => {
 const BenefitsSection = () => {
   const features = [
     {
-      icon: <i class="fa-solid fa-eye"></i>,
+      icon: <i className="fa-solid fa-eye"></i>,
       title: "Procesu vizualizācija",
       desc: "Aktivitāšu diagrammas ļauj vizualizēt procesus vai darbplūsmas grafiskā formā, kas palīdz izprast procesu plūsmu un katras darbības secību.",
     },
     {
-      icon: <i class="fa-regular fa-gauge"></i>,
+      icon: <i className="fa-regular fa-gauge"></i>,
       title: "Sistēmas loģikas modelēšana",
       desc: "Aktivitāšu diagrammas palīdz modelēt sistēmas loģiku, parādot, kā lietotājs vai sistēma reaģē uz dažādiem stāvokļiem.",
     },
     {
-      icon: <i class="fa-solid fa-hand-fist"></i>,
+      icon: <i className="fa-solid fa-hand-fist"></i>,
       title: "Sarežģītu darbplūsmu vienkāršošana",
       desc: "Sarežģīti procesi un darbplūsmas tiek sadalītas vienkāršākās aktivitātēs un secīgās darbībās.",
     },
