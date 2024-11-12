@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import notationExample from "../assets/classNotation.svg";
 import visibilityExample from "../assets/classVisibility.svg";
 import ImageWithComments from "../components/ImageWithComments";
-import associationExample from "../assets/classRelationships/assoc.svg";
+import associationExample from "../assets/classRelationships/assoc.png";
 import inheritanceExample from "../assets/classRelationships/inher.svg";
 import aggregationExample from "../assets/classRelationships/aggreg.svg";
 import dependencyExample from "../assets/classRelationships/dependency.svg";
@@ -46,7 +46,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="h-screen -mb-48 mt-8">
+    <section className="min-h-screen mb-8 lg:-mb-56  mt-40">
       <div className=" max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
@@ -64,7 +64,7 @@ const HeroSection = () => {
                 <div className="flex-none w-24 h-24">
                   <img
                     src={item.img}
-                    className="w-full h-full rounded-full"
+                    className="w-full h-full rounded-full object-contain"
                     alt=""
                   />
                 </div>
