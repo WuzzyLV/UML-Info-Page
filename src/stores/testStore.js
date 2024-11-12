@@ -4,7 +4,10 @@ export const useTestStore = create((set, get) => ({
   open: false,
   questionNumber: 0,
   answers: [],
+  submitted: false,
+  points: 0,
   setOpen: (open) => set({ open }),
+  deleteAnswers: () => set({ answers: [] }),
   setQuestionNumber: (questionNumber) => set({ questionNumber }),
   setAnswers: (newAnswer) =>
     set((state) => {
@@ -30,7 +33,8 @@ export const useTestStore = create((set, get) => ({
       body: JSON.stringify(get().answers),
     });
     if (response.ok) {
-      set({ answers: [] });
+      const data = await response.json();
+      set({ answers: [], submitted: true, points: data.points });
     }
   },
 }));
