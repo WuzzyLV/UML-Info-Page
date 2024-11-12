@@ -119,7 +119,7 @@ const Question = (question) => {
   }, [questionNumber, questionData]);
 
   return (
-    <section className="h-full -mt-20 w-full flex items-center">
+    <section className="h-screen -mt-20 w-full flex items-center">
       <div className="absolute top-0 -z-10 w-full right-0 h-full bg-gradient-to-b from-accent1 to-white opacity-10 blur-xl"></div>
       <div className=" z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
         <div className="space-y-5 max-w-4xl mx-auto text-center">
@@ -185,13 +185,115 @@ const questions = [
   },
   {
     id: 2,
-    title: "Ko nozīmē UML?",
+    title: "Kāds ir UML klases diagrammas galvenais mērķis?",
     type: "quiz",
     options: [
-      { id: 1, title: "Unified Modeling Language" },
-      { id: 2, title: "Unified Model Language" },
-      { id: 3, title: "Unified Model Layer" },
-      { id: 4, title: "Unified Model Layout" },
+      { id: 1, title: "Attēlot klases un to attiecības sistēmā" },
+      { id: 2, title: "Attēlot fizisku sistēmu struktūru" },
+      { id: 3, title: "Attēlot datu plūsmas sistēmā" },
+      {
+        id: 4,
+        title: "Attēlot visus iespējamos programmatūras kļūdu scenārijus",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title:
+      "Kādu veida diagrammu izmantotu lai paradītu iekšējā koda struktūru un tā relāciju?",
+    type: "quiz",
+    options: [
+      { id: 1, title: "Klašu diagrammu" },
+      { id: 2, title: "Aktivitāšu diagrammu" },
+      { id: 3, title: "Izvietošanas diagrammu" },
+      { id: 4, title: "Komponenšu diagrammu" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Klašu diagrammās ko nozīmē simbols + pie atribūta?",
+    type: "quiz",
+    options: [
+      { id: 1, title: "Kad atribūts ir publisks" },
+      { id: 2, title: "Kad atribūts ir privāts" },
+      { id: 3, title: "Kad atribūts ir pievienots" },
+      { id: 4, title: "Kad atribūts ir aizsargāts ⚔" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Klašu diagrammās ko nozīmē simbols + pie atribūta?",
+    type: "quiz",
+    options: [
+      { id: 1, title: "Kad atribūts ir privāts" },
+      { id: 2, title: "Kad atribūts ir pievienots" },
+      { id: 3, title: "Kad atribūts ir publisks" },
+      { id: 4, title: "Kad atribūts ir aizsargāts ⚔" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Kas ir UML aktivitāšu diagramma?",
+    type: "quiz",
+    options: [
+      {
+        id: 1,
+        title:
+          "Diagramma, kas attēlo sistēmas laika gaitā notiekošos procesus.",
+      },
+      {
+        id: 2,
+        title: "Diagramma, kas attēlo sistēmas klases un to attiecības.",
+      },
+      { id: 3, title: "Diagramma, kas attēlo sistēmas datu plūsmu." },
+      {
+        id: 4,
+        title: "Diagramma, kas attēlo sistēmas komponentu arhitektūru.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Kā tiek attēlota aktivitātes diagrammā lēmuma vieta?",
+    type: "quiz",
+    options: [
+      {
+        id: 1,
+        title: "Ar rombu",
+      },
+      {
+        id: 2,
+        title: "Ar taisnstūri",
+      },
+      { id: 3, title: "Ar apli" },
+      {
+        id: 4,
+        title: "Ar trīsstūri",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Kādas ir "paralēlas aktivitātes" UML aktivitāšu diagrammā?',
+    type: "quiz",
+    options: [
+      {
+        id: 1,
+        title:
+          "Aktivitātes, kas tiek izpildītas vienlaikus, izmantojot dakšas mezglu un savienošanas mezgls",
+      },
+      {
+        id: 2,
+        title: "Aktivitātes, kas tiek izpildītas viena pēc otras",
+      },
+      {
+        id: 3,
+        title: "Aktivitātes, kas ir savstarpēji saistītas ar datu plūsmu",
+      },
+      {
+        id: 4,
+        title: "Aktivitātes, kas atspoguļo sistēmas datus",
+      },
     ],
   },
 ];
