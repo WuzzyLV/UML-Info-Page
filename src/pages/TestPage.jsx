@@ -222,13 +222,13 @@ const questions = [
   },
   {
     id: 5,
-    title: "Klašu diagrammās ko nozīmē simbols + pie atribūta?",
+    title: "Klašu diagrammās ko nozīmē simbols # pie atribūta?",
     type: "quiz",
     options: [
-      { id: 1, title: "Kad atribūts ir privāts" },
-      { id: 2, title: "Kad atribūts ir pievienots" },
-      { id: 3, title: "Kad atribūts ir publisks" },
-      { id: 4, title: "Kad atribūts ir aizsargāts ⚔" },
+      { id: 1, title: "Kad atribūts ir aizsargāts ⚔" },
+      { id: 2, title: "Kad atribūts ir privāts" },
+      { id: 3, title: "Kad atribūts ir pievienots" },
+      { id: 4, title: "Kad atribūts ir publisks" },
     ],
   },
   {
