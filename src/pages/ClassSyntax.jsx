@@ -58,7 +58,7 @@ const VisibilitySection = () => {
             comments={[]}
           />
         </div>
-        <div className="max-w-xl flex flex-col justify-center">
+        <div className="max-w-xl flex flex-col justify-center pt-8 sm:pt-0">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             Redzamība
           </h3>
