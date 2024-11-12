@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
+import classExample
 
-export const ClassHome = () => {
+export const ClassNotation = () => {
   return (
     <>
       <HeroSection />

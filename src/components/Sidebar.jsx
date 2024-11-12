@@ -44,8 +44,8 @@ const SectionsList = ({ items }) => (
         <li key={idx}>
           <NavLink
             href={item?.href}
-            active="text-gray-900 border-indigo-600"
-            className="block w-full py-2 px-4 border-l hover:border-indigo-600 hover:text-gray-900 duration-150"
+            active="text-gray-900 border-accent1"
+            className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
           >
             {item?.name}
           </NavLink>
@@ -59,8 +59,8 @@ const Sidebar = () => {
   const lessons = {
     classDiagram: [
       { name: "Kapēc un kā", href: "/class-diagram" },
-      { name: "Sintakse", href: "/class-diagram/syntax" },
-      { name: "Relācija", href: "/class-diagram/relation" },
+      { name: "Kā tos zimē", href: "/class-diagram/syntax" },
+      { name: "Piemeri", href: "/class-diagram/examples" },
     ],
     activityDiagram: [
       { name: "Introduction to Cargo", href: "javascript:void(0)" },
@@ -84,10 +84,10 @@ const Sidebar = () => {
             <div className="text-gray-600 px-4 md:px-8">
               <NavLink
                 href="/"
-                active="text-gray-900 border-indigo-600"
-                className="block w-full py-2 px-4 border-l hover:border-indigo-600 hover:text-gray-900 duration-150"
+                active="text-gray-900 border-accent1"
+                className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
               >
-                Sākums
+                Ievads
               </NavLink>
             </div>
             <div>

@@ -3,9 +3,10 @@ import { Home } from "./pages/Home";
 import Sidebar from "./components/SideBar";
 import { Footer } from "./components/Footer";
 import { ClassHome } from "./pages/ClassHome";
+import { ClassNotation } from "./pages/ClassNotation";
 // pages.js
 export const pages = [
-  { id: 1, title: "Start", path: "/", content: <Home /> },
+  { id: 1, title: "Ievads", path: "/", content: <Home /> },
   {
     id: 2,
     title: "Kapēc un kā",
@@ -14,9 +15,9 @@ export const pages = [
   },
   {
     id: 3,
-    title: "Sintakse",
+    title: "Kā tos zimē",
     path: "/class-diagram/syntax",
-    content: <div>Syntax</div>,
+    content: <ClassNotation />,
   },
   {
     id: 4,
