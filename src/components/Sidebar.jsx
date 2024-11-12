@@ -90,7 +90,7 @@ const Sidebar = () => {
       )}
       <nav
         className={`sm:sticky fixed ${
-          open ? "left-0" : "-left-full"
+          open ? "left-0" : "!-left-full"
         } z-40 top-0 left-0 w-full h-full min-h-screen border-r bg-white space-y-8 overflow-auto sm:w-80 transition-all `}
       >
         <div className="sticky top-0 space-y-8 bg-white">
