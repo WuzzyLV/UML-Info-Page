@@ -10,6 +10,7 @@ const NavLink = ({ ...props }) => {
 
   useEffect(() => {
     const handleRouteChange = () => {
+      console.log(pathname, href);
       if (window.location.pathname === href) {
         setIsActive(active);
       } else {
@@ -117,13 +118,13 @@ const Sidebar = () => {
         <div className="text-[0.9rem] space-y-6">
           <>
             <div className="text-gray-600 px-4 md:px-8">
-              <Link
-                to="/"
+              <NavLink
+                href="/"
                 active="text-gray-900 border-accent1"
                 className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
               >
                 Ievads
-              </Link>
+              </NavLink>
             </div>
             <div>
               <Title>Klašu diagrammas</Title>
