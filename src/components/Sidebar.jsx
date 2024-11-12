@@ -10,6 +10,7 @@ const NavLink = ({ ...props }) => {
 
   useEffect(() => {
     const handleRouteChange = () => {
+      console.log(pathname, href);
       if (window.location.pathname === href) {
         setIsActive(active);
       } else {
@@ -74,27 +75,56 @@ const Sidebar = () => {
       { name: "Piemēri", href: "/activity-diagram/examples" },
     ],
   };
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <nav className=" z-40 top-0 left-0 w-full h-full min-h-screen border-r bg-white space-y-8 overflow-auto sm:w-80 sticky">
+      {!open ? (
+        <button
+          className="fixed z-50  justify-center items-center top-0 right-0 sm:hidden flex m-4 mt-5 p-2 bg-accent2 border border-gray-400  rounded-full"
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          <i className="fa-solid fa-arrow-right-to-line text-xl w-6 h-6 flex justify-center align-middle items-center"></i>
+        </button>
+      ) : (
+        <></>
+      )}
+      <nav
+        className={`sm:sticky fixed ${
+          open ? "left-0" : "-left-full"
+        } z-40 top-0 left-0 w-full h-full min-h-screen border-r bg-white space-y-8 overflow-auto sm:w-80 transition-all `}
+      >
         <div className="sticky top-0 space-y-8 bg-white">
-          <div className="h-20 flex items-center px-4 border-b md:px-8">
-            <Link to="/" className="flex-none">
+          <div className="h-20 flex items-between justify-between px-4 border-b md:px-8">
+            <Link to="/" className="flex items-center">
               <img src="/logo.png" width={140} className="mx-auto" />
             </Link>
+            {open ? (
+              <button
+                className="top-0 right-0 sm:hidden block"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <i className="fa-solid fa-arrow-left-to-line text-2xl w-6 h-6 flex justify-center align-middle items-center"></i>
+              </button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
         <div className="text-[0.9rem] space-y-6">
           <>
             <div className="text-gray-600 px-4 md:px-8">
-              <Link
-                to="/"
+              <NavLink
+                href="/"
                 active="text-gray-900 border-accent1"
                 className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
               >
                 Ievads
-              </Link>
+              </NavLink>
             </div>
             <div>
               <Title>Klašu diagrammas</Title>

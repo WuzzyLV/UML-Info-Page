@@ -43,7 +43,7 @@ export const pages = [
   },
   {
     id: 7,
-    title: "Peljosla",
+    title: "Peldjosla",
     path: "/activity-diagram/swimlane",
     content: <ActivitySwimlane />,
   },

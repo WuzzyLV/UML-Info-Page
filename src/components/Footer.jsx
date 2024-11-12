@@ -25,7 +25,7 @@ export const Footer = () => {
     <footer className="w-full mb-12">
       <div className="flex justify-center">
         <nav
-          className="-mb-px flex border border-gray-400 rounded-lg shadow-md flex items-center"
+          className="-mb-px border border-gray-400 rounded-lg shadow-md flex items-center"
           aria-label="Tabs"
         >
           {/* Previous Button */}
