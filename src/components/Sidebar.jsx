@@ -63,14 +63,12 @@ const Sidebar = () => {
       { name: "Kapēc un kā", href: "/class-diagram" },
       { name: "Kā tos zimē", href: "/class-diagram/syntax" },
       { name: "Relācija", href: "/class-diagram/relation" },
-
       { name: "Piemeri", href: "/class-diagram/examples" },
     ],
     activityDiagram: [
       { name: "Kapēc un kā", href: "/activity-diagram" },
       { name: "Notācijas", href: "/activity-diagram/notations" },
       { name: "Peldjosla", href: "/activity-diagram/swimlane" },
-
       { name: "Piemēri", href: "/activity-diagram/examples" },
     ],
   };
@@ -132,6 +130,15 @@ const Sidebar = () => {
             <div>
               <Title>Aktivitāšu diagrammas</Title>
               <SectionsList items={lessons.activityDiagram} />
+            </div>
+            <div className="text-gray-600 px-4 md:px-8">
+              <NavLink
+                href="/test"
+                active="text-gray-900 border-accent1"
+                className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
+              >
+                Tests
+              </NavLink>
             </div>
           </>
         </div>
