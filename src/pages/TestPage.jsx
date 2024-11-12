@@ -1,6 +1,7 @@
 import { Button } from "@material-tailwind/react";
 import { useTestStore } from "../stores/testStore";
 import { useEffect, useState } from "react";
+import Confetti from "../components/Confetti";
 
 export const TestPage = () => {
   const { open, questionNumber, submitted } = useTestStore();
@@ -26,7 +27,6 @@ const HeroSection = () => {
           <h2 className="text-4xl text-gray-900 text font-extrabold mx-auto md:text-5xl">
             UML diagrammu tests
           </h2>
-
           <p className="max-w-2xl mx-auto text-gray-800">
             Veids kā pārbaudīt Jūsu zināšanas par klases un aktivitāšu UML
             diagrammām.
@@ -52,7 +52,16 @@ const HeroSection = () => {
     </section>
   );
 };
+function getGradientColor(value) {
+  // Ensure the value is clamped between 0 and 100
+  const clampedValue = Math.min(100, Math.max(0, value));
 
+  // Calculate the hue (0 for red to 120 for green)
+  const hue = (clampedValue * 120) / 100;
+
+  // Return the color in a format that can be used with Tailwind's inline style
+  return `hsl(${hue}, 100%, 50%)`;
+}
 const SubmissionResult = () => {
   const { setOpen } = useTestStore();
   const { points, deleteAnswers } = useTestStore();
@@ -70,15 +79,24 @@ const SubmissionResult = () => {
   };
 
   return (
-    <section className="h-screen -mb-64  mt-48">
+    <section className="h-screen -mb-64 mt-48 overflow-x-hidden">
+      <Confetti />
+
       <div className="absolute top-0 -z-10 w-full right-0  bg-gradient-to-b from-accent1 to-white opacity-10 blur-xl"></div>
       <div className=" z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
         <div className="space-y-5 max-w-4xl mx-auto text-center">
           <h2 className="text-4xl text-gray-900 text font-extrabold mx-auto md:text-5xl">
             Testa rezultāts
           </h2>
-          <h3 className=" text-gray-900 text font-extrabold mx-auto md:text-3xl">
-            Tavi iegūtie punkti: {points}
+          <h3 className={` text font-extrabold mx-auto md:text-3xl`}>
+            Tavs rezultāts:{" "}
+            <span
+              style={{
+                color: getGradientColor((points / questions.length) * 100),
+              }}
+            >
+              {Math.round((points / questions.length) * 100)}%
+            </span>
           </h3>
 
           <p className="max-w-2xl mx-auto text-gray-800">{summary(points)}</p>
