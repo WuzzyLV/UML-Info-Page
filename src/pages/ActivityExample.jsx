@@ -1,8 +1,8 @@
-import linardsExample from "../assets/examples/linardsClass.svg";
-import reinisExample from "../assets/examples/CCExampleClass.svg";
+import linardsExample from "../assets/examples/activityLinards.svg";
+import reinisExample from "../assets/examples/CCExampleActivity.svg";
 import ImageZoom from "react-image-zooom";
 
-export const ClassExample = () => {
+export const ActivityExample = () => {
   return (
     <>
       <HeroSection />
@@ -16,25 +16,27 @@ const HeroSection = () => {
       <div className=" max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mb-16">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Sociālā tīkla diagramma
+            Autorizācijas sistēmas diagramma
           </h3>
           <p className="text-gray-600 mt-3">
-            Vienkārša socialā tīkla klases diagramma. Autors: Linards
+            Vienkārša autorizācijas sistēmas diagramma diagramma, web kontekstā.
+            Autors: Linards
           </p>
         </div>
         <div className="w-full flex justify-center">
           <ImageZoom
             src={linardsExample}
-            className="shadow rounded-lg "
             alt="Example 1"
             zoom="140"
+            className="shadow rounded-lg "
           />
         </div>
       </div>
       <div className=" max-w-screen-xl mx-auto px-4 pt-32 md:px-8 pb-96">
         <div className="max-w-xl mb-16">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Vairāku spēlētāju gājienu spēle pārlūkprogrammā
+            Vairāku spēlētāju gājienu spēle pārlūkprogrammā, lietotāja
+            prespektīva
           </h3>
           <p className="text-gray-600 mt-3">
             Pārlukprogrammas spēle kur ir vienkārša spēletāja kustināšana un
@@ -44,7 +46,7 @@ const HeroSection = () => {
         <div className="w-full flex justify-center">
           <ImageZoom
             src={reinisExample}
-            alt="Example 2"
+            alt="Example2"
             className="shadow rounded-lg "
             zoom="140"
           />
