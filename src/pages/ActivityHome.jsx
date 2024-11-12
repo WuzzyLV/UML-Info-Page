@@ -4,7 +4,6 @@ export const ActivityHome = () => {
   return (
     <>
       <HeroSection />
-      <WhatShows />
       <BenefitsSection />
     </>
   );
@@ -89,55 +88,6 @@ const BenefitsSection = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const WhatShows = () => {
-  const faqsList = [
-    {
-      q: "Darbības (aktivitātes)",
-    },
-    {
-      q: "Plūsmas savienojumus",
-    },
-    {
-      q: "Sākuma un beigu punktus",
-    },
-    {
-      q: "Lēmumu mezglus",
-    },
-    {
-      q: "Paralēlas darbības",
-    },
-  ];
-
-  return (
-    <section className="py-14 pb-28">
-      <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
-        <div className="flex-1">
-          <div className="max-w-lg">
-            <h3 className="font-semibold text-accent1">Ko tās apzimē?</h3>
-            <p className="mt-3 text-gray-800 text-2xl font-bold sm:text-4xl">
-              Aktivitāšu diagrammas apzimē šīs lietas:
-            </p>
-          </div>
-        </div>
-        <div className="flex-1 mt-12 md:mt-0">
-          <ol className=" divide-y ">
-            {faqsList.map((item, idx) => (
-              <li className="py-2" key={idx}>
-                <summary className="flex items-center justify-start font-semibold text-gray-800">
-                  <span className="text-gray-700 mr-2 font-medium">
-                    {idx + 1}.
-                  </span>{" "}
-                  {item.q}
-                </summary>
-              </li>
-            ))}
-          </ol>
         </div>
       </div>
     </section>
