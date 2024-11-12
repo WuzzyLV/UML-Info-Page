@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import Sidebar from "./components/SideBar";
+import Sidebar from "./components/Sidebar";
 import { Footer } from "./components/Footer";
 import { ClassHome } from "./pages/ClassHome";
 import { ClassNotation } from "./pages/ClassSyntax";
