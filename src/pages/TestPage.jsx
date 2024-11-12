@@ -55,7 +55,19 @@ const HeroSection = () => {
 
 const SubmissionResult = () => {
   const { setOpen } = useTestStore();
-  const { points } = useTestStore();
+  const { points, deleteAnswers } = useTestStore();
+
+  const summary = (points) => {
+    if (points < 3) {
+      return "Jūsu zināšanas par UML diagrammām ir ļoti vājas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+    }
+    if (points < 5) {
+      return "Jūsu zināšanas par UML diagrammām ir vidējas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+    }
+    if (points > 7) {
+      return "Jūsu zināšanas par UML diagrammām ir labas. Iesakām izlasīt materiālus vēlreiz un pēc tam atkārtoti pildīt testu.";
+    }
+  };
 
   return (
     <section className="h-screen -mb-64  mt-48">
@@ -69,13 +81,16 @@ const SubmissionResult = () => {
             Tavi iegūtie punkti: {points}
           </h3>
 
-          <p className="max-w-2xl mx-auto text-gray-800">
-            Veids kā pārbaudīt Jūsu zināšanas par klases un aktivitāšu UML
-            diagrammām.
-          </p>
-          <Button size="sm" onClick={() => setOpen(true)}>
+          <p className="max-w-2xl mx-auto text-gray-800">{summary(points)}</p>
+          <Button
+            size="sm"
+            onClick={() => {
+              setOpen(true);
+              deleteAnswers();
+            }}
+          >
             <div className="flex flex-row justify-center items-center gap-1">
-              Sākt pildīt testu
+              Pildīt testu atkārtoti
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -160,7 +175,7 @@ const Question = (question) => {
         ) : null}
 
         <div className="mt-20 flex flex-row justify-center">
-          {questionNumber + 1 === questions.length && (
+          {answers.length === questions.length && (
             <Button size="sm" onClick={submit} fullWidth>
               Pabeigt testu!
             </Button>

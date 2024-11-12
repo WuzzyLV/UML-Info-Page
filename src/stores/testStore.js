@@ -7,7 +7,8 @@ export const useTestStore = create((set, get) => ({
   submitted: false,
   points: 0,
   setOpen: (open) => set({ open }),
-  deleteAnswers: () => set({ answers: [] }),
+  deleteAnswers: () =>
+    set({ answers: [], submitted: false, points: 0, questionNumber: 0 }),
   setQuestionNumber: (questionNumber) => set({ questionNumber }),
   setAnswers: (newAnswer) =>
     set((state) => {
