@@ -3,7 +3,8 @@ import { Home } from "./pages/Home";
 import Sidebar from "./components/SideBar";
 import { Footer } from "./components/Footer";
 import { ClassHome } from "./pages/ClassHome";
-import { ClassNotation } from "./pages/ClassNotation";
+import { ClassNotation } from "./pages/ClassSyntax";
+import { ClassRelation } from "./pages/ClassRelation";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -23,7 +24,7 @@ export const pages = [
     id: 4,
     title: "Relācija",
     path: "/class-diagram/relation",
-    content: <div>Relation</div>,
+    content: <ClassRelation />,
   },
   {
     id: 5,

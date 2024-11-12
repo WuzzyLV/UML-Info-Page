@@ -60,6 +60,8 @@ const Sidebar = () => {
     classDiagram: [
       { name: "Kapēc un kā", href: "/class-diagram" },
       { name: "Kā tos zimē", href: "/class-diagram/syntax" },
+      { name: "Relācija", href: "/class-diagram/relation" },
+
       { name: "Piemeri", href: "/class-diagram/examples" },
     ],
     activityDiagram: [
