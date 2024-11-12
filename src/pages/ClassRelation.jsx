@@ -53,8 +53,9 @@ const HeroSection = () => {
             Relācija starp klasēm
           </h3>
           <p className="text-gray-600 mt-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum has been the industry's standard dummy.
+            Tās palīdz attēlot un saprast objektorientētās programmatūras
+            struktūru un darbību. Šīs relācijas nosaka, kā vairākas klases ir
+            saistītas viena ar otru.
           </p>
         </div>
         <div className="mt-12">
