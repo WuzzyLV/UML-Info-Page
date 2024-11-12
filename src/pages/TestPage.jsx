@@ -3,10 +3,14 @@ import { useTestStore } from "../stores/testStore";
 import { useEffect, useState } from "react";
 
 export const TestPage = () => {
-  const { open, questionNumber } = useTestStore();
+  const { open, questionNumber, submitted } = useTestStore();
 
   return open ? (
-    <Question question={questions[questionNumber]} />
+    submitted ? (
+      <SubmissionResult />
+    ) : (
+      <Question question={questions[questionNumber]} />
+    )
   ) : (
     <HeroSection />
   );
@@ -49,11 +53,70 @@ const HeroSection = () => {
   );
 };
 
+const SubmissionResult = () => {
+  const { setOpen } = useTestStore();
+  const { points } = useTestStore();
+
+  return (
+    <section className="h-screen -mb-64  mt-48">
+      <div className="absolute top-0 -z-10 w-full right-0  bg-gradient-to-b from-accent1 to-white opacity-10 blur-xl"></div>
+      <div className=" z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
+        <div className="space-y-5 max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl text-gray-900 text font-extrabold mx-auto md:text-5xl">
+            Testa rezultāts
+          </h2>
+          <h3 className=" text-gray-900 text font-extrabold mx-auto md:text-3xl">
+            Tavi iegūtie punkti: {points}
+          </h3>
+
+          <p className="max-w-2xl mx-auto text-gray-800">
+            Veids kā pārbaudīt Jūsu zināšanas par klases un aktivitāšu UML
+            diagrammām.
+          </p>
+          <Button size="sm" onClick={() => setOpen(true)}>
+            <div className="flex flex-row justify-center items-center gap-1">
+              Sākt pildīt testu
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const shuffleArray = (array) => {
+  let shuffledArray = array.slice();
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const Question = (question) => {
   const { questionNumber, setQuestionNumber, setAnswers, answers, submit } =
     useTestStore();
 
   const { question: questionData } = question;
+
+  const [shuffledOptions, setShuffledOptions] = useState([]);
+
+  useEffect(() => {
+    if (questions.length > 0) {
+      setShuffledOptions(shuffleArray(questionData.options));
+    }
+  }, [questionNumber, questionData]);
 
   return (
     <section className="h-full -mt-20 w-full flex items-center">
@@ -68,7 +131,7 @@ const Question = (question) => {
 
         {questionData.type === "quiz" ? (
           <div className="flex flex-col gap-4 mt-8">
-            {questionData.options.map((option) => (
+            {shuffledOptions.map((option) => (
               <Button
                 key={option.id}
                 color="gray"
@@ -81,7 +144,7 @@ const Question = (question) => {
                 onClick={() => {
                   setAnswers({
                     questionId: questionData.id,
-                    pickedOption: option.id,
+                    pickedAnswer: option.id,
                   });
                   if (questionNumber + 1 === questions.length) {
                     return;
