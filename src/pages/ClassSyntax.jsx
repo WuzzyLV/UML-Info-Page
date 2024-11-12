@@ -30,12 +30,12 @@ const HeroSection = () => {
             alt="Annotated Image"
             comments={[
               {
-                top: 61,
+                top: 75,
                 left: 8,
                 text: "Atribūti tiek balstīti uz mainīgajiem kodā.",
               },
               {
-                top: 77,
+                top: 93,
                 left: 82,
                 text: "Operācijas ir balstītas uz metodēm kodā",
               },
