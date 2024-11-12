@@ -1,5 +1,6 @@
 import { Button } from "@material-tailwind/react";
 import { useTestStore } from "../stores/testStore";
+import { useEffect, useState } from "react";
 
 export const TestPage = () => {
   const { open, questionNumber } = useTestStore();
@@ -66,6 +67,8 @@ const Question = (question) => {
 
   const { question: questionData } = question;
 
+  console.log(answers);
+
   return (
     <section className="h-full -mt-20 w-full flex items-center">
       <div className="absolute top-0 -z-10 w-full right-0 h-full bg-gradient-to-b from-accent1 to-white opacity-10 blur-xl"></div>
@@ -84,11 +87,20 @@ const Question = (question) => {
                 key={option.id}
                 color="gray"
                 size="lg"
+                disabled={answers.some(
+                  (answer) =>
+                    answer.questionId === questionData.id &&
+                    answer.pickedOption === option.id
+                )}
                 onClick={() => {
                   setAnswers({
                     questionId: questionData.id,
                     pickedOption: option.id,
                   });
+                  if (questionNumber + 1 === questions.length) {
+                    return;
+                  }
+                  setQuestionNumber(questionNumber + 1);
                 }}
               >
                 {option.title}
@@ -96,21 +108,13 @@ const Question = (question) => {
             ))}
           </div>
         ) : null}
+
         <div className="mt-20 flex flex-row justify-center">
-          <Button
-            size="sm"
-            onClick={handlePrevQuestion}
-            disabled={questionNumber === 0}
-          >
-            Back
-          </Button>
-          <Button
-            size="sm"
-            onClick={handleNextQuestion}
-            disabled={questionNumber + 2 > questions.length}
-          >
-            Next
-          </Button>
+          {questionNumber + 1 === questions.length && (
+            <Button size="sm" onClick={() => {}} fullWidth>
+              Pabeigt testu!
+            </Button>
+          )}
         </div>
       </div>
     </section>
