@@ -10,6 +10,8 @@ import { ActivitySwimlane } from "./pages/ActivitySwimlane";
 import { ActivityNotations } from "./pages/ActivityNotations";
 import { ClassExample } from "./pages/ClassExample";
 import { TestPage } from "./pages/TestPage";
+import { ActivityExample } from "./pages/ActivityExample";
+import ScrollToTop from "./components/ScrollToTop";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -33,7 +35,7 @@ export const pages = [
   },
   {
     id: 9,
-    title: "Piemēri",
+    title: "Klašu piemēri",
     path: "/class-diagram/examples",
     content: <ClassExample />,
   },
@@ -57,9 +59,9 @@ export const pages = [
   },
   {
     id: 8,
-    title: "Piemēri",
+    title: " Aktivitāšu piemēri",
     path: "/activity-diagram/examples",
-    content: <ActivityHome />,
+    content: <ActivityExample />,
   },
   {
     id: 10,
@@ -73,6 +75,7 @@ function App() {
   return (
     <main className="flex flex-row bg-[#fafafb3d]  ">
       <Router>
+        <ScrollToTop />
         <Sidebar />
         <div className="w-full">
           <Routes>
