@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { ClassHome } from "./pages/ClassHome";
 import { ClassNotation } from "./pages/ClassSyntax";
 import { ClassRelation } from "./pages/ClassRelation";
+import { ActivityHome } from "./pages/ActivityHome";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -28,9 +29,9 @@ export const pages = [
   },
   {
     id: 5,
-    title: "Activity Diagram Introduction",
-    path: "/activity-diagram-introduction",
-    content: <div>Activity</div>,
+    title: "Kapēc un kā",
+    path: "/activity-diagram",
+    content: <ActivityHome />,
   },
 ];
 

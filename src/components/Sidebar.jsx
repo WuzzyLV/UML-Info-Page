@@ -65,7 +65,7 @@ const Sidebar = () => {
       { name: "Piemeri", href: "/class-diagram/examples" },
     ],
     activityDiagram: [
-      { name: "Introduction to Cargo", href: "javascript:void(0)" },
+      { name: "Kapēc un kā", href: "/activity-diagram" },
       { name: "Installing and Configuring Cargo", href: "javascript:void(0)" },
       { name: "Basic Cargo Commands", href: "javascript:void(0)" },
     ],
