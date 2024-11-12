@@ -53,21 +53,7 @@ const Question = (question) => {
   const { questionNumber, setQuestionNumber, setAnswers, answers } =
     useTestStore();
 
-  const handleNextQuestion = () => {
-    if (questionNumber < questions.length - 1) {
-      setQuestionNumber(questionNumber + 1);
-    }
-  };
-
-  const handlePrevQuestion = () => {
-    if (questionNumber > 0) {
-      setQuestionNumber(questionNumber - 1);
-    }
-  };
-
   const { question: questionData } = question;
-
-  console.log(answers);
 
   return (
     <section className="h-full -mt-20 w-full flex items-center">
