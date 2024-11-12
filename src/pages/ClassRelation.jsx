@@ -17,30 +17,27 @@ const HeroSection = () => {
     {
       img: associationExample,
       name: "Asociācija",
-      desc: " Asociācija attēlo vienkāršu savienojumu starp divām vai vairākām klasēm. Tā parāda, ka klases sadarbojas vai ir savstarpēji saistītas.",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      desc: "Asociācija attēlo vienkāršu savienojumu starp divām vai vairākām klasēm. Tā parāda, ka klases sadarbojas vai ir savstarpēji saistītas.",
     },
     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Micheal colorand",
-      title: "Software engineer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      img: associationExample,
+      name: "Mantošana",
+      desc: "Mantošana, norāda, ka viena klase manto citas klases īpašības un uzvedību.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-      name: "Brown Luis",
-      title: "Full stack engineer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      img: associationExample,
+      name: "Agregācija",
+      desc: "Agregācija ir vājas saites attiecība, kur viena klase sastāv no citām klasēm, bet klases var eksistēt neatkarīgi.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-      name: "Lysa sandiago",
-      title: "Head of designers",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      img: associationExample,
+      name: "Atkarība",
+      desc: "Atkarība norāda, ka viena klase izmanto citu klasi, piemēram, kā metodes parametru vai mainīgo. Tā ir īslaicīga un nenoteikta saite starp klasēm.",
+    },
+    {
+      img: associationExample,
+      name: "Realizācija",
+      desc: "Realizācija ir attiecības veids, kas parāda, ka viena klase īsteno kādu interfeisu vai abstrakto klasi.",
     },
   ];
 
@@ -62,7 +59,7 @@ const HeroSection = () => {
               <li key={idx} className="flex gap-4 items-center">
                 <div className="flex-none w-24 h-24">
                   <img
-                    src={item.img}
+                    src={associationExample}
                     className="w-full h-full rounded-full"
                     alt=""
                   />
