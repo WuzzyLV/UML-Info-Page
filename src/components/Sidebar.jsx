@@ -146,7 +146,7 @@ const Sidebar = () => {
             </div>
             <div className="text-gray-600 px-4 md:px-8">
               <NavLink
-                href="/test"
+                href="/tests"
                 active="text-gray-900 border-accent1"
                 className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
               >
