@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // NavLink component
 const NavLink = ({ ...props }) => {
   const { children, href = "", className = "", active = "" } = props;
@@ -25,9 +25,9 @@ const NavLink = ({ ...props }) => {
   }, [pathname]);
 
   return (
-    <a href={href} {...props} className={`${isActive} ${className}`}>
+    <Link to={href} {...props} className={`${isActive} ${className}`}>
       {children}
-    </a>
+    </Link>
   );
 };
 
@@ -76,21 +76,21 @@ const Sidebar = () => {
       <nav className=" z-40 top-0 left-0 w-full h-full min-h-screen border-r bg-white space-y-8 overflow-auto sm:w-80 sticky">
         <div className="sticky top-0 space-y-8 bg-white">
           <div className="h-20 flex items-center px-4 border-b md:px-8">
-            <a href="javascript:void(0)" className="flex-none">
+            <Link to="/" className="flex-none">
               <img src="/logo.png" width={140} className="mx-auto" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="text-[0.9rem] space-y-6">
           <>
             <div className="text-gray-600 px-4 md:px-8">
-              <NavLink
-                href="/"
+              <Link
+                to="/"
                 active="text-gray-900 border-accent1"
                 className="block w-full py-2 px-4 border-l hover:border-accent1 hover:text-gray-900 duration-150"
               >
                 Ievads
-              </NavLink>
+              </Link>
             </div>
             <div>
               <Title>Klašu diagrammas</Title>
