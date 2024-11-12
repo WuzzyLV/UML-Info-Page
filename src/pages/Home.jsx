@@ -71,7 +71,7 @@ const FreqUsed = () => {
 
   return (
     <section className="py-14 pb-24" id="">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-2 px-4 text-gray-600 gap-16 justify-between md:px-8 lg:flex">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2  px-4 text-gray-600 gap-16 justify-between md:px-8 lg:flex">
         <div>
           <div className="max-w-xl space-y-3">
             <h3 className="text-accent1 font-semibold">Populārakie</h3>
@@ -101,7 +101,7 @@ const FreqUsed = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-12 lg:mt-0 flex justify-center">
+        <div className="mt-12 lg:mt-0 sm:flex hidden justify-center">
           <img src="/classEx.svg" className="object-contain" />
         </div>
       </div>
