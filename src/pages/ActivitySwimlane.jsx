@@ -1,6 +1,3 @@
-import { Typography } from "@material-tailwind/react";
-import notationExample from "../assets/classNotation.svg";
-import ImageWithComments from "../components/ImageWithComments";
 import swimlaneBig from "../assets/swimlaneBig.svg";
 
 export const ActivitySwimlane = () => {
@@ -23,7 +20,7 @@ const HeroSection = () => {
             Aktivitāšu diagrammas organizēšanas metode, kas palīdz sadalīt un
             strukturēt procesus pēc dažādiem lomu vai atbildības laukumiem. Šī
             struktūra nodrošina, ka katra darbība diagrammā tiek ievietota
-            noteiktā "joslā", kas attiecas uz konkrētu lomu
+            noteiktā &#34;joslā&#34;, kas attiecas uz konkrētu lomu
           </p>
         </div>
         <img src={swimlaneBig} alt="Swimlane" className="h-80" />
