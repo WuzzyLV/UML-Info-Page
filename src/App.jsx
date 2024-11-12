@@ -66,7 +66,7 @@ export const pages = [
   {
     id: 10,
     title: "Tests",
-    path: "/test",
+    path: "/tests",
     content: <TestPage />,
   },
 ];
