@@ -8,6 +8,7 @@ import { ClassRelation } from "./pages/ClassRelation";
 import { ActivityHome } from "./pages/ActivityHome";
 import { ActivitySwimlane } from "./pages/ActivitySwimlane";
 import { ActivityNotations } from "./pages/ActivityNotations";
+import { ClassExample } from "./pages/ClassExample";
 // pages.js
 export const pages = [
   { id: 1, title: "Ievads", path: "/", content: <Home /> },
@@ -28,6 +29,12 @@ export const pages = [
     title: "Relācija",
     path: "/class-diagram/relation",
     content: <ClassRelation />,
+  },
+  {
+    id: 9,
+    title: "Piemēri",
+    path: "/class-diagram/examples",
+    content: <ClassExample />,
   },
   {
     id: 5,
