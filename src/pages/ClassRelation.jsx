@@ -42,7 +42,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen  mb-12  mt-40">
+    <section className="min-h-screen mt-40">
       <div className=" max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
